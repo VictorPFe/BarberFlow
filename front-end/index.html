@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BarberFlow</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="container">
+  
+  <header class="cabecalho">
+    
+    <nav class="menuNavegacao">
+
+      <div class="logotipo">
+        <img src="assets/img/Logotipo Branco.svg" alt="">
+        <div>
+          <h1>BARBERFLOW</h1>
+          <h2>BARBER STUDIO</h2>
+        </div>
+      </div>
+
+      <div class="menu">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+        </ul>
+      </div>
+
+      <div class="loginCadastro">
+        <ul>
+          <li class="login">
+            <a href="login.html">Login</a>         
+          </li>
+          <li class="cadastro">
+            <a href="cadastro.html">Cadastre-se</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="menuBurg" onclick="botaoMenu()">
+        <button type="button">
+          <img src="assets/img/menu-svgrepo-com.svg" alt="">
+        </button>
+      </div>
+
+      <div class="menuMobile">
+        
+        <div class="logotipoMobile">
+          <img src="assets/img/Logotipo Preto.svg" alt="">
+          <div>
+            <h1>BARBERFLOW</h1>
+            <h2>BARBER STUDIO</h2>
+          </div>
+        </div>
+
+        <div class="navegacaoMobile">
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+          </ul>
+        </div>
+
+        <div class="loginCadastroMobile">
+          <ul>
+            <li class="loginMobile">
+              <a href="login.html">Login</a>         
+            </li>
+            <li class="cadastroMobile">
+              <a href="cadastro.html">Cadastre-se</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+     </nav>
+  </header>
+
+  <main class="principal">
+
+    <section class="apresentacao">
+      <h2>AGENDE SEU <span>HORÁRIO</span></h2>
+      <p>Serviços profissionais de cuidados pessoais, personalizados para o seu estilo.</p>
+      <p>Agendamento simples. Confirmação imediata.</p>
+    </section>
+
+    <section class="informacoesFormulario">
+
+      <section class="formulario">
+        <form method="post">
+          <h3>Dados pessoais</h3>
+          <div class="dadosPessoais">
+            <div class="campo nomeInput">
+              <label for="nome">Nome Completo</label>
+              <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+            </div>
+            <div class="campo">
+              <label for="telefone">Telefone</label>
+              <input type="tel"  name="telefone" id="telefone" placeholder="Digite seu telefone" required>
+            </div>
+          </div>
+          <h3>Selecione o serviço</h3>
+          <label for="servicosCompleto" id="servicoLabel">Serviços</label>
+          <select id="servicosCompleto" class="campo" name="servicos" onchange="atualizarCampos()" required>
+            <option value="">Escolha o serviço</option>
+            <option value="corte" data-preco="25.00">Corte - R$25,00</option>
+            <option value="barba" data-preco="15.00">Barba - R$15,00</option>
+            <option value="corteBarba" data-preco="40.00">Corte + Barba - R$40,00</option>
+            <option value="corteInfantil" data-preco="20.00">Corte Infantil - R$20,00</option>
+            <option value="sobrancelha" data-preco="10.00">Sobrancelha - R$10,00</option>
+            <option value="luzes" data-preco="50.00">Luzes - R$50,00</option>
+            <option value="platinado" data-preco="100.00">Platinado - R$100,00</option>
+          </select>
+
+          <input type="hidden" name="servico" id="inputServico">
+          <input type="hidden" name="preco" id="inputPreco">
+
+          <h3>Data e horário</h3>
+
+          <div class="dataHora">
+
+            <div class="campo dataHoraInput">
+              <label for="calendario">Escolha uma data disponível</label>
+              <input type="date" id="calendario" name="calendario" required>
+            </div>
+
+            <div class="campo">
+              <label for="horario">Horários disponíveis</label>
+              <input type="time" id="horario" name="horario" required>
+            </div>
+
+          </div>
+
+          <div class="campo">
+            <label for="observacao">Observações (opcional)</label>
+            <textarea name="observacao" id="observacao" placeholder="Deseja informar alguma preferência?"></textarea>
+          </div> 
+
+          <button class="botao" type="submit">CONFIRMAR AGENDAMENTO</button>
+
+          <p id="confira">Confira seus dados antes de confirmar.</p>
+        </form>
+      </section>  
+
+      <section class="informativo">
+
+        <div class="comoFunciona">
+          <h3>Como funciona?</h3>
+
+          <div class="etapas">
+
+            <div class="etapa">
+              <span class="numero">1</span>
+              <div class="conteudo">
+                <h4>Escolha seu horário</h4>
+                <p>Selecione o serviço, a data e um horário disponível na agenda</p>
+              </div>
+            </div>
+
+            <div class="etapa">
+              <span class="numero">2</span>
+              <div class="conteudo">
+                <h4>Confirme pelo site</h4>
+                <p>Revise seus dados e finalize seu agendamento em poucos passos.</p>
+              </div>
+            </div>
+
+            <div class="etapa">
+              <span class="numero">3</span>
+              <div class="conteudo">
+                <h4>Receba a confirmação</h4>
+                <p>Veja o status do seu agendamento e consulte os detalhes da sua reserva.</p>
+              </div>  
+            </div>
+
+          </div>
+        </div>
+        <div id="seuCorteInfo">
+          <h3>Seu próximo corte começa aqui.</h3>
+          <p>Mais praticidade para você, mais organização para sua barbearia</p>
+        </div>
+      </section>
+
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+
+    <div class="conteudoRodape">
+
+      <div id="logoRodape">
+        <h3>BARBERFLOW</h3>
+        <p>Cortes de cabelo precisos para o homem moderno. <br/> Seu estilo começa com confiança.</p>
+      </div>
+
+      <div id="acessoRap">
+        <h4>Acesso Rápido</h4>
+        <nav>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li> <a href="servicos.html">Serviços</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="agendamentos.html">Agendamento</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div>
+        <h4>Contato</h4>
+        <div id="contato">
+          <p>Rua Baptista Machado, n°18</p>
+          <p>barberflow@gmail.com</p>
+          <p>71 99999-9999</p>
+        </div>
+      </div>
+
+      <div>
+        <h4>Horários</h4>
+
+        <div id="diasHorasFun">
+
+          <div id="diasFun">
+            <p>Ter - Sex</p>
+            <p>Sábado</p>
+            <p>Segunda</p>
+          </div> 
+
+          <div id="horasFun">
+            <p>8:00 - 18:00</p>
+            <p>8:00 - 16:00</p>
+            <p>Fechado</p>
+          </div>
+
+        </div>
+        
+      </div>
+
+    </div>
+
+    <div id="copyRodape">
+      <p>&copy; 2026 BarberFlow. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

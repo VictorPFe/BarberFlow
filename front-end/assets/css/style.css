@@ -1,0 +1,491 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(../fonts/Inter-VariableFont_opsz\,wght.ttf);
+}
+
+@font-face {
+  font-family: Oswald;
+  src: url(../fonts/Oswald-VariableFont_wght.ttf);
+}
+
+.container{
+  width: 100%;
+  max-width: 1200px; /* Largura máxima do container */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+body{
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  min-height: 100vh;
+  background: #0d0d0d;
+  
+  background-image: url(../img/Barbearia.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+a, h2, h3{
+  font-family: 'Oswald', sans-serif;
+}
+
+@media (max-width: 800px) {
+  .loginCadastro{
+    display: none;
+  }
+  .menu{
+    display: none;
+  }
+} 
+
+
+@media (min-width: 799px ){
+  .menuBurg{
+    display: none;
+  }
+}
+
+.menuBurg button{
+  cursor: pointer;
+  display: flex;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+}
+
+.menuMobile{
+  display: none;
+}
+
+.menuMobile{
+  padding: 25px;
+  position: absolute;
+  display: hidden;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  top: 0;
+  right: 0;
+  border-radius: 0px 0px 0px 25px;
+}
+
+.logotipoMobile{
+  color: black;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #999;
+}
+
+.logotipoMobile h2 {
+  font-size: 15px;
+  font-weight: 100;
+  display: inline-block;
+  letter-spacing: 4.2px;
+  transform-origin: left center;
+}
+
+.logotipoMobile img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.menuMobile a {
+  display: flex;
+  justify-content: center;
+  color: black;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+.loginCadastroMobile{
+  margin-top: 25px;
+}
+
+.loginMobile a{
+  color: white;
+  padding: 10px;
+  background-color: #1d1d1d;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.cadastroMobile a{
+  color: white;
+  padding: 10px;
+  background-color: #1d1d1d;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+
+.cabecalho {
+  width: 100%;
+  height: 50px;
+  padding: 20px;
+  margin-bottom: 65px;
+}
+
+
+.logotipo{
+  color: white;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.logotipo h2 {
+  font-size: 15px;
+  font-weight: 100;
+  display: inline-block;
+  letter-spacing: 4.2px;
+  transform-origin: left center;
+}
+
+.logotipo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.principal{
+  border-bottom: solid 1px #3b3b3b;
+}
+
+.menuNavegacao{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu ul{
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  display: flex;
+  gap: 30px;
+  border-radius: 20px;
+}
+
+.menu a {
+  color: white;
+  text-transform: uppercase;
+}
+
+.menu a:hover{
+  color: wheat;
+}
+
+.loginCadastro ul{
+  align-items: center;
+  background-color: white;
+  height: 10px;
+  padding: 20px;
+  display: flex;
+  border-radius: 20px;
+}
+
+.login {
+    border-right: 1px solid #999;
+    padding-right: 15px;
+}
+
+.cadastro{
+  padding-left: 15px;
+}
+
+.loginCadastro a{
+  color: black;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.apresentacao{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin-bottom: 65px;
+}
+
+.apresentacao h2{
+  color: white;
+  font-size: 2.5rem;
+}
+
+.apresentacao span{
+  color: wheat;
+}
+
+.apresentacao p {
+  font-weight: 200;
+}
+
+.informacoesFormulario{
+  display: grid;
+  gap: 25px;
+  grid-template-columns: 3fr 1fr;
+  margin-bottom: 60px;
+}
+
+.formulario{
+  background-color: #1d1d1d;
+  padding: 30px;
+  color: white;
+  border-radius: 10px;
+  border-top: solid 5px wheat;
+  box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.315);
+  margin-bottom: auto;
+}
+
+.formulario h3{
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px #3b3b3b;
+  color: wheat;
+}
+
+.formulario label{
+  font-family: 'Oswald', sans-serif;
+}
+
+@media (max-width: 800px) {
+  .dadosPessoais{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.dadosPessoais {
+  display: flex;
+  width: 100%;
+}
+
+.nomeInput {
+  margin-right: 30px;
+}
+
+.dataHoraInput{
+  margin-right: 30px;
+}
+
+.campo{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
+  min-width: 0;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.campo label{
+  margin-bottom: 5px;
+}
+
+.campo input{
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  background-color: #0d0d0d;
+}
+
+
+select {
+  margin-top: 5px;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  background-color: #0d0d0d;
+}
+
+@media (max-width: 800px) {
+  .dataHora{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.dataHora{
+  display: flex;
+  width: 100%;
+}
+
+.dataHora input{
+  color: white;
+}
+
+.campo textarea {
+  background-color: #0d0d0d;
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.botao{
+  background-color: wheat;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 100%;
+  height: 50px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+#confira{
+  display: flex;
+  color: #999;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+
+.informativo h3{
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.informativo h4{
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+
+}
+
+.informativo p{
+  font-weight: 300;
+  margin-bottom: 16px;
+  font-size: 0.8rem;
+}
+
+.comoFunciona{
+  background-color: #1d1d1d;
+  padding: 30px;
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+#seuCorteInfo{
+  background-color: wheat;
+  padding: 30px;
+  color: black;
+  border-radius: 10px;
+}
+
+.etapas{
+  display: flex;
+  flex-direction: column;
+}
+
+.etapa{
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.numero{
+  background-color: #0d0d0d;
+  color: wheat;
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.conteudo{
+  flex: 1;
+}
+
+@media (max-width: 800px) {
+  .informacoesFormulario{
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.rodape{
+  color: white;
+}
+
+.rodape p{
+  font-size: 0.8rem;
+  color: #999;
+  font-family: 'Inter', sans-serif;
+}
+
+.rodape a{
+  font-size: 0.8rem;
+  color: #999;
+  font-family: 'Inter', sans-serif;
+}
+
+.rodape h4{
+  margin-bottom: 10px;
+}
+
+.conteudoRodape{
+  display: flex;
+  border-bottom: solid 1px #3b3b3b;
+  justify-content: center;
+  padding: 25px;
+  justify-content: space-between;
+}
+
+#logoRodape h3{
+  margin-bottom: 10px;
+}
+
+#contato p{
+  margin-bottom: 7px;
+}
+
+#diasHorasFun{
+  display: flex;
+  gap: 50px;
+}
+
+#copyRodape{
+  padding: 25px;
+}
+
+
+@media (max-width: 900px){
+  .conteudoRodape{
+    display: flex;
+    flex-direction: column;
+  }
+  .conteudoRodape h4{
+    margin-top: 25px;
+  }
+ }
